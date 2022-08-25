@@ -10,10 +10,10 @@ package oop.class1;
  */
 public class TestPessoa {
     public static void main(String[] args) {
-        Pessoa mauricio = new Pessoa();
-        mauricio.altura = 1.61f;
-        mauricio.anoNascimento = 1990;
-        mauricio.nome = "Maurício";
+        Pessoa mauricio = new Pessoa("Mauricio", 1990, 1.61f);
+//        mauricio.altura = 1.61f;
+//        mauricio.anoNascimento = 1990;
+//        mauricio.nome = "Maurício";
         mauricio.mostrarDados();
         System.out.println("A idade de " + mauricio.nome + " é " + mauricio.calcularIdade());
     }

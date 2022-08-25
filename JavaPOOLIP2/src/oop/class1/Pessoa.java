@@ -15,6 +15,12 @@ public class Pessoa {
     int anoNascimento;
     float altura;
     
+    Pessoa(String nome, int anoNascimento, float altura) {
+        this.nome = nome;
+        this.anoNascimento = anoNascimento;
+        this.altura = altura;
+    }
+    
     void mostrarDados() {
         System.out.println("Nome: " + nome);
         System.out.println("Ano de Nascimento: " + anoNascimento);
