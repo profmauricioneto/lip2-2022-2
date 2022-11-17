@@ -1,22 +1,23 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package oop.designpatterns.template_methods;
+
 /**
  *
- * @author mauricio.moreira
+ * @author maumneto
  */
-public class FacebookNetwork extends SocialNetwork {
-    public FacebookNetwork(String username, String password) {
+public class InstagramNetwork extends SocialNetwork {
+
+    public InstagramNetwork(String username, String password) {
         this.username = username;
         this.password = password;
     }
     @Override
     public boolean login(String username, String password) {
         System.out.println("Name: " + this.username);
-        System.out.print("Senha: ");
+        System.out.print("Password: ");
         for (int i = 0; i < this.password.length(); i++) {
             System.out.print("*");
         }
@@ -27,7 +28,7 @@ public class FacebookNetwork extends SocialNetwork {
     public boolean sendData(byte[] data) {
         boolean message = true;
         if (message){
-            System.out.println("Mensagem: " + new String(data) + " foi postada no facebook!");
+            System.out.println("Mensagem: " + new String(data) + " foi postada no instagram!");
             return true;
         } else {
             return false;
@@ -35,6 +36,6 @@ public class FacebookNetwork extends SocialNetwork {
     }
     @Override
     public void logout(){
-        System.out.println("Usuário: " + username + " foi desconectado do facebook!");
-    } 
+        System.out.println("Usuário: " + username + " foi desconectado do instagram!");
+    }
 }

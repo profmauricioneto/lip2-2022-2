@@ -27,13 +27,15 @@ public class ExampleTemplateMethod {
         System.out.print("Coloque o seu Post: ");
         String message = reader.readLine();
         
-        System.out.print("Escolha a Rede Social a ser postada: [facebook/twitter] ");
-        String socialNet = scan.next();
+        System.out.print("Escolha a Rede Social a ser postada: [facebook/twitter/instagram] ");
+        String socialNet = scan.next().toLowerCase();
         
         if (socialNet.equals("facebook")) {
             network = new FacebookNetwork(username, password);
-        } else {
+        } else if (socialNet.equals("twitter")){
             network = new TwitterNetwork(username, password);
+        } else if (socialNet.equals("instagram")) {
+            network = new InstagramNetwork(username, password);
         }
         network.postData(message);
     } 

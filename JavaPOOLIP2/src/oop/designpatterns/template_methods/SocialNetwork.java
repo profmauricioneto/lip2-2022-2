@@ -22,7 +22,7 @@ public abstract class SocialNetwork {
         return false;
     }
     // abstract methods (subclasses will implement them)
-    public abstract boolean login (String username, String password);
-    public abstract boolean sendData (byte[] data);
-    public abstract void logout ();
+    public abstract boolean login(String username, String password);
+    public abstract boolean sendData(byte[] data);
+    public abstract void logout();
 }

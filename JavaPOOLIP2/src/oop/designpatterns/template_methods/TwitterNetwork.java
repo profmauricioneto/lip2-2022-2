@@ -14,8 +14,8 @@ public class TwitterNetwork extends SocialNetwork {
         this.username = username;
         this.password = password;
     }
-    
-        public boolean login (String username, String password) {
+    @Override
+    public boolean login(String username, String password) {
         System.out.println("Name: " + this.username);
         System.out.print("Senha: ");
         for (int i = 0; i < this.password.length(); i++) {
@@ -24,7 +24,8 @@ public class TwitterNetwork extends SocialNetwork {
         System.out.println("\nLogin realizado com sucesso!");
         return true;
     }
-    public boolean sendData (byte[] data) {
+    @Override
+    public boolean sendData(byte[] data) {
         boolean message = true;
         if (message){
             System.out.println("Mensagem: " + new String(data) + " foi postada no twitter!");
@@ -33,7 +34,8 @@ public class TwitterNetwork extends SocialNetwork {
             return false;
         }
     }
-    public void logout (){
+    @Override
+    public void logout(){
         System.out.println("Usuário: " + username + " foi desconectado do twitter!");
     } 
 }
